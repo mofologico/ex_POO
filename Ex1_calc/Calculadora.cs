@@ -1,21 +1,16 @@
-﻿using System;
-using System.Linq.Expressions;
-
-class Calculadora
+﻿class Calculadora
 {
-    static void Main()
+    public static void Executar()
     {
-
-        while (true) 
+        while (true)
         {
-            Console.WriteLine("qual operação?\n\n 1 - soma\n 2 - subtração\n 3 - multiplicação\n 4 - divisão\n 5 - sair");
-            int operação = int.Parse(Console.ReadLine());
+            Console.WriteLine("qual operação?\n\n 1 - soma\n 2 - subtração\n 3 - multiplicação\n 4 - divisão\n 5 - voltar");
+            int operacao = int.Parse(Console.ReadLine());
 
-            if (operação == 5)
+            if (operacao == 5)
             {
-                //sair
-                Console.WriteLine("tchau");
-                Environment.Exit(0);
+                //voltar
+                Home.Main();
             }
 
             Console.WriteLine("digite o primeiro número da operação.");
@@ -26,7 +21,7 @@ class Calculadora
 
             int resultado = 0;
 
-            switch (operação)
+            switch (operacao)
             {
                 case 1:
                     //soma
@@ -48,28 +43,21 @@ class Calculadora
                     break;
                 case 4:
                     //divisão
-
                     if (valor1 != 0 || valor2 != 0)
                     {
-
                         resultado = valor1 / valor2;
                         Console.WriteLine("O resultado é: " + resultado);
 
                         break;
-
                     }
                     else
                     {
                         Console.WriteLine("Não é possível dividir por zero.");
                         break;
                     }
-                    
             }
             Console.WriteLine(" "); //espaço entre operações
-
         }
-        
-
     }
 }
 
