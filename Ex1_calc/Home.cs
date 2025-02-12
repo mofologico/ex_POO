@@ -6,7 +6,6 @@
         while (true)
         {
             Console.WriteLine("qual exercicio?\n\n 1 - calculadora\n 2 - Soma e média\n 3 - Jogar dados\n 4 - Datas\n 5 - Conversão de moedas\n 6 - Jogo da forca\n 7 - Sair");
-            
             int exercicio = int.Parse(Console.ReadLine());
 
             if (exercicio == 7)
